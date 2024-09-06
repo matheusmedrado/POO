@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class resolucao {
+public class Resolucao {
 
     public static boolean alteraPreco(float[] preco, int index, float porcentagem) {
         if (porcentagem > -100) {
