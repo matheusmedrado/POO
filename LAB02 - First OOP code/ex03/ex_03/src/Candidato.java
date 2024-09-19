@@ -48,7 +48,7 @@ public class Candidato {
     public void imprimir() {
         System.out.println("Nome: " + getNome());
         System.out.println("Data de Nascimento: " + getDataNascimento());
-        System.out.println("Gênero: " + getGenero());
+        System.out.println("Genero: " + getGenero());
         System.out.println("Bens: " + getBens());
         System.out.println("Reeleição: " + isReeleicao());
         System.out.println("\n");

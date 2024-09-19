@@ -14,7 +14,7 @@ public class Candidato {
 
     };
 
-    public void imprimir_candidato(){
+    public void imprimir(){
         System.out.println("Nome: " + nome);
         System.out.println("Data de nascimento: " + dataNascimento);
         System.out.println("Genero: " + genero);
@@ -25,6 +25,11 @@ public class Candidato {
 
 }
 
-//Candidatos a vereador do munícipio de Joaquim Pires - PI
-//Codigo: 2205409
-//Matricula: 12311BB054
+
+
+/*
+
+Refaça o exercício 02 utilizando construtores para inicialização dos atributos dos objetos criados.
+
+
+*/

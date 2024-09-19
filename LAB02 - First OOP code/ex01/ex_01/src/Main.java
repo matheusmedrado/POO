@@ -1,37 +1,36 @@
 public class Main {
     public static void main(String[] args) {
         Candidato candidato1 = new Candidato(
-                "Maria Silva",
-                "15/03/1975",
-                "Feminino",
-                250000.00,
-                true,
-                12,
-                "Vereadora"
+                "JOSE ROBERTO COSTA CARVALHO ",
+                "29/11/1969",
+                "Masculino",
+                40000.0f,
+                false
         );
 
         Candidato candidato2 = new Candidato(
-                "João Souza",
-                "22/07/1980",
+                "FRANCISCO DAS CHAGAS SOUZA ",
+                "14/11/1971",
                 "Masculino",
-                150000.00,
-                false,
-                34,
-                "Prefeito"
+                70000.0f,
+                false
         );
 
         Candidato candidato3 = new Candidato(
-                "Ana Pereira",
-                "30/11/1985",
+                "REGINALDO PEREIRA DA SILVA",
+                "08/12/1975",
                 "Feminino",
-                300000.00,
-                true,
-                56,
-                "Vice-Prefeita"
+                20000.0f,
+                false
         );
 
-        candidato1.exibirInformacoes();
-        candidato2.exibirInformacoes();
-        candidato3.exibirInformacoes();
+        candidato1.imprimir_candidato();
+        candidato2.imprimir_candidato();
+        candidato3.imprimir_candidato();
+
     }
+
+
 }
+
+
