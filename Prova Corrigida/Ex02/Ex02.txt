@@ -1,0 +1,13 @@
+- O comando new em Java é fundamental para criar objetos, pois aloca memória na heap 
+para o novo objeto e chama o construtor da classe, inicializando seus atributos. 
+Sem o new, não há memória alocada para o objeto, resultando em um estado indefinido. 
+Portanto, ele garante que o objeto comece em um estado definido.
+
+- Se você declarar uma variável de uma classe sem usar new, como em Jogador jogador; por exemplo, 
+você cria uma referência nula, mas não um objeto. A variável jogador não aponta para nada 
+até ser inicializada com new. 
+
+- Objetos, como Jogador, são variáveis de referência que armazenam a localização de um objeto na 
+heap e podem ser nulas, enquanto variáveis primitivas, como int, armazenam valores diretamente na 
+stack e não podem ser nulas. Para criar um objeto, usa-se new, enquanto primitivas podem ser inicializadas diretamente. 
+Além disso, objetos têm métodos e atributos, enquanto primitivas são apenas valores.
