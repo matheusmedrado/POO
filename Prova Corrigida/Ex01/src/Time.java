@@ -1,27 +1,30 @@
 public class Time {
-    private final String pNome;
-    private final Jogador pTitular1;
-    private final Jogador pTitular2;
-    private final Jogador pSubstituto;
+    private  String Nome;
+    private Jogador Titular1;
+    private Jogador Titular2;
+    private Jogador Substituto;
 
-    public Time(String pNome, Jogador pTitular1, Jogador pTitular2, Jogador pSubstituto) {
-        this.pNome = pNome;
-        this.pTitular1 = pTitular1;
-        this.pTitular2 = pTitular2;
-        this.pSubstituto = pSubstituto;
+    public Time(String Nome, Jogador Titular1, Jogador Titular2, Jogador Substituto) {
+        this.Nome = Nome;
+        this.Titular1 = Titular1;
+        this.Titular2 = Titular2;
+        this.Substituto = Substituto;
     }
 
-    public Time(String pNome, Jogador pTitular1, Jogador pTitular2) {
-        this(pNome, pTitular1, pTitular2, null);
+    public Time(String Nome, Jogador Titular1, Jogador Titular2) {
+        this.Nome = Nome;
+        this.Titular1 = Titular1;
+        this.Titular2 = Titular2;
+        this.Substituto = null;
     }
 
     public String mostrarInformacoes() {
-        String info = "Time: " + pNome + "\n" +
-                "Titular 1: " + pTitular1.mostrarInformacoes() + "\n" +
-                "Titular 2: " + pTitular2.mostrarInformacoes() + "\n";
+        String info = "Time: " + Nome + "\n" +
+                "Titular 1: " + Titular1.mostrarInformacoes() + "\n" +
+                "Titular 2: " + Titular2.mostrarInformacoes() + "\n";
 
-        if (pSubstituto != null) {
-            info += "Substituto: " + pSubstituto.mostrarInformacoes() + "\n";
+        if (Substituto != null) {
+            info += "Substituto: " + Substituto.mostrarInformacoes() + "\n";
         } else {
             info += "Substituto: Não informado\n";
         }
@@ -30,11 +33,11 @@ public class Time {
     }
 
     public double calcularIdadeMedia() {
-        int totalIdade = pTitular1.getIdade() + pTitular2.getIdade();
+        int totalIdade = Titular1.getIdade() + Titular2.getIdade();
         int numJogadores = 2;
 
-        if (pSubstituto != null) {
-            totalIdade += pSubstituto.getIdade();
+        if (Substituto != null) {
+            totalIdade += Substituto.getIdade();
             numJogadores++;
         }
 

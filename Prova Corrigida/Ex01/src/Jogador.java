@@ -1,36 +1,36 @@
 public class Jogador {
-    private String pNome;
-    private int pIdade;
-    private double pAltura;
-    private double pPeso;
+    private String Nome;
+    private int Idade;
+    private double Altura;
+    private double Peso;
 
-    public Jogador(String pNome, int pIdade, double pAltura, double pPeso) {
-        this.pNome = pNome;
-        this.pIdade = pIdade;
-        this.pAltura = pAltura;
-        this.pPeso = pPeso;
+    public Jogador(String Nome, int Idade, double Altura, double Peso) {
+        this.Nome = Nome;
+        this.Idade = Idade;
+        this.Altura = Altura;
+        this.Peso = Peso;
     }
 
     public String getNome() {
-        return pNome;
+        return Nome;
     }
 
     public int getIdade() {
-        return pIdade;
+        return Idade;
     }
 
     public double getAltura() {
-        return pAltura;
+        return Altura;
     }
 
     public double getPeso() {
-        return pPeso;
+        return Peso;
     }
 
     public String mostrarInformacoes() {
-        return "Jogador [Nome: " + pNome +
-                ", Idade: " + pIdade + " anos" +
-                ", Altura: " + pAltura + " m" +
-                ", Peso: " + pPeso + " kg]";
+        return "Jogador [Nome: " + Nome +
+                ", Idade: " + Idade + " anos" +
+                ", Altura: " + Altura + " m" +
+                ", Peso: " + Peso + " kg]";
     }
 }
