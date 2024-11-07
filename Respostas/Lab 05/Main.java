@@ -1,9 +1,28 @@
+import java.time.LocalDate;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Estudante e = new Estudante("Carlos","Rua 1o de Abril");
+        System.out.println("---------------------------------------------------------------------------");
+        EstudantePosGrad[] estudante = new EstudantePosGrad[4];
+        estudante[0] = new EstudantePosGrad("Ailton","Rua 31 de fevereiro","Engenharia",
+                "Banco de Dados");
+        estudante[1] = new EstudantePosGrad("Airton","Rua 32 de fevereiro","Engenharia de software",
+                "Banco de clusters");
+        estudante[2] = new EstudantePosGrad("Amilton","Rua 33 de fevereiro","Engenharia elétrica",
+                "Banco de Eletrons");
 
+        Estudante[] normal = new Estudante[3];
+
+        System.arraycopy(estudante, 0, normal, 0, 3);
+
+        Universidade uni = new Universidade("FUFU", LocalDate.parse("1545-02-02"), normal);
+        uni.printUniversidade();
+        System.out.println("---------------------------------------------------------------------------");
+
+
+        Estudante e = new Estudante("Carlos","Rua 1o de Abril");
         EstudanteGraduacao eg = new EstudanteGraduacao("Maria", "Rua Maio", "Java is funny");
         EstudantePosGrad ep = new EstudantePosGrad("Ailton","Rua 31 de fevereiro","Engenharia",
                 "Banco de Dados");
@@ -11,9 +30,8 @@ public class Main {
                 "Vacinas de RNA", "academico","Anticorpos");
         EstudanteDoutorado epd = new EstudanteDoutorado("Bruno","Rua Inverno",
                 "Tecnologia","Processamento de Imagens","Carros Inteligentes");
-/*
-        e.print();
 
+        e.print();
 
         eg.print();
         System.out.println("Título TCC: " + eg.getTituloTCC());
@@ -28,9 +46,8 @@ public class Main {
         System.out.println("Título Tese: " + epd.getTituloTese());
 
 
-*/
-        // casos com polimorfismo
 
+        // casos com polimorfismo
         Estudante e2 = new Estudante("Carlos","Rua 1o de Abril");
         Estudante eg2 = new EstudanteGraduacao("Maria", "Rua Maio", "Java is funny");
         Estudante ep2 = new EstudantePosGrad("Ailton","Rua 31 de fevereiro","Engenharia",
@@ -40,31 +57,18 @@ public class Main {
         Estudante epd2 = new EstudanteDoutorado("Bruno","Rua Inverno",
                 "Tecnologia","Processamento de Imagens","Carros Inteligentes");
 
-        // exemplo de uso com vetor e com CAST
-
-//        EstudanteGraduacao eg = new EstudanteGraduacao("Maria", "Rua Maio", "Java is funny");
 /*
-
-
-
         e2.print();
-
-        eg2.print();
-        epm2.print();
+        epd2.print();
         ep2.print();
         epd2.print();
+        EstudanteDoutorado epd3;
+        epd3 = (EstudanteDoutorado)epd2;
+        System.out.println(epd3.getTituloTese());
+        System.out.println(((EstudanteDoutorado)epd2).getTituloTese());
 */
-     //   EstudanteDoutorado epd3;
-      //  epd3 = (EstudanteDoutorado)epd2;
-       // System.out.println(epd3.getTituloTese());
-       // System.out.println(((EstudanteDoutorado)epd2).getTituloTese());
 
-      //  Estudante eg2 = new EstudanteGraduacao("Maria", "Rua Maio", "Java is funny");
-
-
-        eg.getTituloTCC();
-     /* //  esses casos temos erro pois as variáveis terminando em 2
-         //são do tipo Estudante
+/*
         eg2.print();
         System.out.println(eg2.getTituloTCC());
 
@@ -74,28 +78,7 @@ public class Main {
         epm2.print();
         System.out.println(epm2.getTituloDissertacao());
 
-   */
-       //resolvendo com CAST
-        eg2.print();
-        System.out.println( ((EstudanteGraduacao) eg2).getTituloTCC());
-       System.out.println( ((EstudanteGraduacao) e2).getTituloTCC());
-        Estudante[] ev = new Estudante[4];
-        ev[0] = eg;
-        ev[1] = epd2;
-        ev[2] = epm2;
-        ev[3] = e;
-        for (Estudante i : ev){
-            i.print();
-
-            if (i instanceof EstudanteGraduacao){
-                System.out.println("\n");
-                ((EstudanteGraduacao) i).getTituloTCC();
-            }
-        }
-
-        //System.out.println(epd2.getTituloTese());
-
-
+*/
         /*
         Estudante e2 = new Estudante();
         Estudante eg2 = new EstudanteGraduacao();
